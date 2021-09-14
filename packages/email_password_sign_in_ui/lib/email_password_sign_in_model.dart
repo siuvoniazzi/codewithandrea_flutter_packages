@@ -42,8 +42,13 @@ class EmailPasswordSignInModel with EmailAndPasswordValidators, ChangeNotifier {
               EmailAuthProvider.credential(email: email, password: password));
           break;
         case EmailPasswordSignInFormType.register:
-          await firebaseAuth.createUserWithEmailAndPassword(
-              email: email, password: password);
+          var credential =
+              EmailAuthProvider.credential(email: email, password: password);
+
+          await firebaseAuth.currentUser!.linkWithCredential(credential);
+
+          // await firebaseAuth.createUserWithEmailAndPassword(
+          //     email: email, password: password);
           break;
         case EmailPasswordSignInFormType.forgotPassword:
           await firebaseAuth.sendPasswordResetEmail(email: email);
