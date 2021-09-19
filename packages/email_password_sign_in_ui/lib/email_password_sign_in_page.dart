@@ -186,31 +186,22 @@ class _EmailPasswordSignInPageState extends State<EmailPasswordSignInPage> {
         title: Text(model.title),
       ),
       backgroundColor: Colors.grey[200],
-      body: Stack(children: [
-        SingleChildScrollView(
-          child: Center(
-            child: LayoutBuilder(builder: (context, constraints) {
-              return Container(
-                width: min(constraints.maxWidth, 600),
-                padding: const EdgeInsets.all(16.0),
-                child: Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: _buildContent(),
-                  ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: LayoutBuilder(builder: (context, constraints) {
+            return Container(
+              width: min(constraints.maxWidth, 600),
+              padding: const EdgeInsets.all(16.0),
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: _buildContent(),
                 ),
-              );
-            }),
-          ),
+              ),
+            );
+          }),
         ),
-        Positioned(
-          top: 20,
-          right: 20,
-          child: IconButton(
-              onPressed: () => Navigator.pop(context),
-              icon: const Icon(Icons.close)),
-        )
-      ]),
+      ),
     );
   }
 }
