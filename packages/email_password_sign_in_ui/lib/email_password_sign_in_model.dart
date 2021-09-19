@@ -42,7 +42,7 @@ class EmailPasswordSignInModel with EmailAndPasswordValidators, ChangeNotifier {
               EmailAuthProvider.credential(email: email, password: password));
           break;
         case EmailPasswordSignInFormType.register:
-          var credential =
+          final credential =
               EmailAuthProvider.credential(email: email, password: password);
 
           await firebaseAuth.currentUser!.linkWithCredential(credential);

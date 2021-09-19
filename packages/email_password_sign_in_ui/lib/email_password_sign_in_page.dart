@@ -155,7 +155,7 @@ class _EmailPasswordSignInPageState extends State<EmailPasswordSignInPage> {
               onPressed: model.isLoading ? null : _submit,
             ),
             const SizedBox(height: 8.0),
-            FlatButton(
+            TextButton(
               key: const Key('secondary-button'),
               child: Text(model.secondaryButtonText),
               onPressed: model.isLoading
@@ -163,7 +163,7 @@ class _EmailPasswordSignInPageState extends State<EmailPasswordSignInPage> {
                   : () => _updateFormType(model.secondaryActionFormType),
             ),
             if (model.formType == EmailPasswordSignInFormType.signIn)
-              FlatButton(
+              TextButton(
                 key: const Key('tertiary-button'),
                 child: const Text(
                     EmailPasswordSignInStrings.forgotPasswordQuestion),
@@ -186,22 +186,31 @@ class _EmailPasswordSignInPageState extends State<EmailPasswordSignInPage> {
         title: Text(model.title),
       ),
       backgroundColor: Colors.grey[200],
-      body: SingleChildScrollView(
-        child: Center(
-          child: LayoutBuilder(builder: (context, constraints) {
-            return Container(
-              width: min(constraints.maxWidth, 600),
-              padding: const EdgeInsets.all(16.0),
-              child: Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: _buildContent(),
+      body: Stack(children: [
+        SingleChildScrollView(
+          child: Center(
+            child: LayoutBuilder(builder: (context, constraints) {
+              return Container(
+                width: min(constraints.maxWidth, 600),
+                padding: const EdgeInsets.all(16.0),
+                child: Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: _buildContent(),
+                  ),
                 ),
-              ),
-            );
-          }),
+              );
+            }),
+          ),
         ),
-      ),
+        Positioned(
+          top: 20,
+          right: 20,
+          child: IconButton(
+              onPressed: () => Navigator.pop(context),
+              icon: const Icon(Icons.close)),
+        )
+      ]),
     );
   }
 }

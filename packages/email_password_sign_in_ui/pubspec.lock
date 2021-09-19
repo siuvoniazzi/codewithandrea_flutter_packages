@@ -13,7 +13,7 @@ packages:
     description:
       path: "packages\\alert_dialogs"
       ref: HEAD
-      resolved-ref: c375f4906c1fa90f29fd0e0cc8eb728d5852963a
+      resolved-ref: a5e31959f812fdead23112961d4d8aef8e9896b5
       url: "https://github.com/siuvoniazzi/codewithandrea_flutter_packages"
     source: git
     version: "0.2.0"
@@ -169,7 +169,7 @@ packages:
     description:
       path: "packages\\custom_buttons"
       ref: HEAD
-      resolved-ref: c375f4906c1fa90f29fd0e0cc8eb728d5852963a
+      resolved-ref: a5e31959f812fdead23112961d4d8aef8e9896b5
       url: "https://github.com/siuvoniazzi/codewithandrea_flutter_packages"
     source: git
     version: "0.1.0"
@@ -471,7 +471,7 @@ packages:
     description:
       path: "packages\\string_validators"
       ref: HEAD
-      resolved-ref: c375f4906c1fa90f29fd0e0cc8eb728d5852963a
+      resolved-ref: a5e31959f812fdead23112961d4d8aef8e9896b5
       url: "https://github.com/siuvoniazzi/codewithandrea_flutter_packages"
     source: git
     version: "0.1.0"

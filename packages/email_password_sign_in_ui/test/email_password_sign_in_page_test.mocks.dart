@@ -118,17 +118,17 @@ class MockFirebaseAuth extends _i1.Mock implements _i4.FirebaseAuth {
       (super.noSuchMethod(Invocation.method(#setLanguageCode, [languageCode]),
           returnValue: Future.value(null),
           returnValueForMissingStub: Future.value()) as _i5.Future<void>);
-  @override
-  _i5.Future<void> setSettings(
-          {bool? appVerificationDisabledForTesting, String? userAccessGroup}) =>
-      (super.noSuchMethod(
-          Invocation.method(#setSettings, [], {
-            #appVerificationDisabledForTesting:
-                appVerificationDisabledForTesting,
-            #userAccessGroup: userAccessGroup
-          }),
-          returnValue: Future.value(null),
-          returnValueForMissingStub: Future.value()) as _i5.Future<void>);
+  // @override
+  // _i5.Future<void> setSettings(
+  //         {bool? appVerificationDisabledForTesting, String? userAccessGroup}) =>
+  //     (super.noSuchMethod(
+  //         Invocation.method(#setSettings, [], {
+  //           #appVerificationDisabledForTesting:
+  //               appVerificationDisabledForTesting,
+  //           #userAccessGroup: userAccessGroup
+  //         }),
+  //         returnValue: Future.value(null),
+  //         returnValueForMissingStub: Future.value()) as _i5.Future<void>);
   @override
   _i5.Future<void> setPersistence(_i7.Persistence? persistence) =>
       (super.noSuchMethod(Invocation.method(#setPersistence, [persistence]),
